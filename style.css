@@ -37,10 +37,10 @@ p {
   padding: 50px 35px;
   flex-direction: column;
   background-color: var(--Grey-800);
-  /* min-width: 360px; */
-  /* max-width: 80px; */
+  min-width: 360px;
+  max-width: 80px;
   border-radius: 2%;
-  min-height: 85vh;
+  max-height: 100vh;
 }
 #header{
   display: flex;
