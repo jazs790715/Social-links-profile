@@ -1,93 +1,190 @@
-# Frontend Mentor - Social links profile
+# Frontend Mentor - Social Links Profile Solution
 
-![Design preview for the Social links profile coding challenge](./preview.jpg)
+This is a solution to the [Social links profile challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/social-links-profile-UG32l9m6dQ). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-## Welcome! 👋
+## Table of contents
 
-Thanks for checking out this front-end coding challenge.
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Feedback & Contributions](#feedback--contributions)
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
+## Overview
 
-**To do this challenge, you need a basic understanding of HTML and CSS.**
+### The challenge
 
-## The challenge
-
-Your challenge is to build out this social links profile and get it looking as close to the design as possible.
-
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
-
-Your users should be able to:
+Users should be able to:
 
 - See hover and focus states for all interactive elements on the page
+- View the profile on different screen sizes with responsive design
+- Access social media links (when URLs are added)
 
-Want some support on the challenge? [Join our community](https://www.frontendmentor.io/community) and ask questions in the **#help** channel.
+### Screenshot
 
-## Where to find everything
+![Social Links Profile Screenshot](./preview.jpg)
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design.
+*The social links profile showing personal information and interactive buttons*
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`.
+### Links
 
-If you would like the design files (we provide Sketch & Figma versions) to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+- Solution URL: [GitHub Repository](https://github.com/jazs790715/Social-links-profile)
+- Live Site URL: [GitHub Pages](https://jazs790715.github.io/Social-links-profile/)
 
-All the required assets for this project are in the `/assets` folder. The images are already exported for the correct screen size and optimized.
+## My process
 
-We also include variable and static font files for the required fonts for this project. You can choose to either link to Google Fonts or use the local font files to host the fonts yourself. Note that we've removed the static font files for the font weights that aren't needed for this project.
+### Built with
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+- Semantic HTML5 markup
+- CSS custom properties (CSS Variables)
+- Flexbox for layout
+- Mobile-first workflow
+- Google Fonts (Inter family)
+- Modern CSS features (hover states, border-radius)
 
-## Building your project
+**Custom Modifications:**
+- Personalized color palette (modified from original design)
+- Custom GitHub avatar integration
+- Personal information and branding
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+### What I learned
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+During this project, I reinforced my understanding of several key concepts and made several custom modifications:
 
-## Deploying your project
+**Custom Color Palette**: I customized the original color scheme to create a more personalized dark theme with warm accent colors, moving away from the default Frontend Mentor colors to create a unique visual identity.
 
-As mentioned above, there are many ways to host your project for free. Our recommend hosts are:
+**Personal Avatar Integration**: Instead of using the provided avatar image, I integrated my own GitHub profile picture directly from the GitHub API (https://avatars.githubusercontent.com/u/7389361?v=4), making the profile truly personal.
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+**CSS Custom Properties for consistent theming:**
+```css
+:root {
+  --primary-color: hsl(75, 94%, 57%);
+  --secundary-color: rgb(207, 156, 108);
+  --Grey-700: hsl(0, 0%, 20%);
+  --Grey-800: hsl(0, 0%, 12%);
+  --Grey-900: hsl(0, 0%, 8%); 
+}
+```
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
+**Flexbox for centering and layout:**
+```css
+.social-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 35px;
+  background-color: var(--Grey-800);
+}
+```
 
-## Create a custom `README.md`
+**Interactive hover effects:**
+```css
+.style-button:hover {
+  background-color: var(--secundary-color);
+  color: white;
+  cursor: pointer;
+}
+```
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+**Semantic HTML structure:**
+```html
+<section id="header">
+  <div id="avatar">
+    <img src="https://avatars.githubusercontent.com/u/7389361?v=4" alt="image avatar">
+  </div>
+  <p id="name">Johan Zambrano</p>
+  <p id="location">Guayaquil, Ecuador</p>
+  <p>"Front-end developer and avid reader."</p>
+</section>
+```
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
+### Continued development
 
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
+Areas I want to focus on in future projects:
 
-## Submitting your solution
+- **Accessibility improvements**: Adding proper ARIA labels and keyboard navigation
+- **Advanced CSS Grid**: Exploring more complex layouts with CSS Grid
+- **CSS Animations**: Adding subtle transitions and animations for better user experience
+- **Performance optimization**: Implementing lazy loading for images and optimizing CSS
+- **JavaScript interactivity**: Adding dynamic features like theme switching
 
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
+### Useful resources
 
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
+- [CSS Custom Properties Guide](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) - Helped me implement consistent theming throughout the project
+- [Flexbox Complete Guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) - Essential for understanding the layout structure
+- [Inter Font Family](https://fonts.google.com/specimen/Inter) - Perfect typography choice for modern web design
+- [CSS Hover Effects](https://www.w3schools.com/css/css_pseudo_classes.asp) - Understanding pseudo-classes for interactive elements
 
-## Sharing your solution
+## Author
 
-There are multiple places you can share your solution:
+- Website - [Johan Zambrano](https://github.com/jazs790715)
+- Frontend Mentor - [@jazs790715](https://www.frontendmentor.io/profile/jazs790715)
+- GitHub - [@jazs790715](https://github.com/jazs790715)
+- Location - Guayaquil, Ecuador
 
-1. Share your solution page in the **#finished-projects** channel of our [community](https://www.frontendmentor.io/community).
-2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on other social channels like LinkedIn.
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
+---
 
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback.
+## Project Structure
 
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
+```
+Social-links-profile/
+├── assets/
+│   ├── fonts/
+│   │   ├── static/
+│   │   │   ├── Inter-Bold.ttf
+│   │   │   ├── Inter-Regular.ttf
+│   │   │   └── Inter-SemiBold.ttf
+│   │   ├── Inter-VariableFont_slnt,wght.ttf
+│   │   └── OFL.txt
+│   └── images/
+│       ├── avatar-jessica.jpeg
+│       └── favicon-32x32.png
+├── design/
+│   ├── active-states.jpg
+│   ├── desktop-design.jpg
+│   └── mobile-design.jpg
+├── index.html
+├── style.css
+├── style-guide.md
+├── preview.jpg
+└── README.md
+```
 
-## Got feedback for us?
+## Features
 
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
+- ✨ **Responsive Design**: Works on mobile and desktop devices
+- 🎨 **Custom Color Scheme**: Personalized dark theme with warm accent colors (customized from original design)
+- 🖼️ **Personal Avatar**: Custom GitHub profile image integration (replaced default avatar)
+- 🔗 **Social Links**: Ready-to-use buttons for all major platforms
+- ⚡ **Hover Effects**: Interactive button states
+- 🎯 **Semantic HTML**: Proper structure and accessibility considerations
+- 📱 **Mobile-First**: Optimized for mobile devices first
 
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
+## Feedback & Contributions
 
-**Have fun building!** 🚀
+💬 **I welcome all feedback!** Whether you're a fellow developer, designer, or just someone browsing through my work, your insights are incredibly valuable to me.
+
+I'm particularly interested in feedback about:
+- **Code quality and best practices**: Any suggestions for cleaner, more efficient code
+- **Design improvements**: Ideas for better UI/UX or visual enhancements  
+- **Accessibility**: Ways to make the site more accessible to all users
+- **Performance optimizations**: Suggestions for faster loading and better performance
+- **Development process**: Tips on workflow, tools, or methodologies
+
+Feel free to:
+- Open an issue on GitHub
+- Leave comments on my Frontend Mentor solution
+- Connect with me on social media
+- Share your thoughts via email or any platform
+
+**Every piece of feedback helps me grow as a developer!** 🚀
+
+---
+
+Challenge by [Frontend Mentor](https://www.frontendmentor.io?ref=challenge). Coded by [Johan Zambrano](https://github.com/jazs790715).
