@@ -48,10 +48,7 @@ p {
   padding-block: 3rem;
   background-color: var(--grey-800);
   border-radius: 0.5rem;
-  max-height: 100vh;
-  min-width: 20rem;
-  max-width: 25rem;
-  width: 100%;
+  width: clamp(320px, 40vw, 380px);
 }
 
 header {
