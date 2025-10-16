@@ -1,126 +1,139 @@
 @font-face {
-  font-family: inter;
-  src: local("./assets/fonts/Inter-VariableFont_slnt,wght.ttf") format("ttf");
-  src: url("https://fonts.google.com/specimen/Inter") format("ttf");
+  font-family: "Inter";
+  src: url("./assets/fonts/Inter-VariableFont_slnt,wght.ttf") format("truetype");
   font-weight: 400 600 700;
+  font-display: swap;
 }
 
 :root {
+  /* 🎨 Colores */
   --primary-color: hsl(75, 94%, 57%);
-  --secundary-color: rgb(207, 156, 108);
-  --sise-font-big: 20px;
-  --color-texto-oscuro: #333;
-  --Grey-700: hsl(0, 0%, 20%);
-  --Grey-800: hsl(0, 0%, 12%);
-  --Grey-900: hsl(0, 0%, 8%); 
+  --secondary-color: rgb(207, 156, 108);
+  --text-dark: #333;
+  --grey-700: hsl(0, 0%, 20%);
+  --grey-800: hsl(0, 0%, 12%);
+  --grey-900: hsl(0, 0%, 8%);
+
+  /* 🔠 Tipografía */
+  --font-size-large: 1.25rem;
 }
 
-body{
-padding: 5rem;
-display: flex;
-flex-direction: row;
-align-content: center;
-justify-content: center;
-box-sizing: border-box;
-background-color: var(--Grey-900);
-color: white;
-font-family: Inter, sans-serif;
+body {
+  padding-inline: 5rem;
+  padding-block: 5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: var(--grey-900);
+  color: white;
+  font-family: "Inter", sans-serif;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 2.5rem;
 }
 
 p {
-    font-size: 14px;
-    text-align: center;
+  font-size: 0.88em;
+  text-align: center;
 }
 
-.social-links{
+.social-links {
   display: flex;
-  padding: 50px 35px;
   flex-direction: column;
-  background-color: var(--Grey-800);
-  min-width: 360px;
-  max-width: 80px;
-  border-radius: 2%;
+  padding-inline: 3rem;
+  padding-block: 3rem;
+  background-color: var(--grey-800);
+  border-radius: 0.5rem;
   max-height: 100vh;
+  min-width: 20rem;
+  max-width: 25rem;
+  width: 100%;
 }
-#header{
+
+header {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-#avatar{
+
+#avatar {
   display: flex;
   justify-content: center;
   align-items: center;
-  object-fit: cover;
-  width: 110px;
-  height: 110px;
+  inline-size: 7em;
+  block-size: 7em;
 }
 
-#links{
-  display:flex;
+main {
+  display: flex;
   flex-direction: column;
-  justify-items: center;
   text-align: center;
   gap: 15px;
-  margin-top: 10px;
 }
 
-img{
-  width: 100%;
-  height: 100%;
+img {
+  inline-size: 100%;
+  block-size: 100%;
   border-radius: 50%;
 }
 
-.attribution { 
-  margin: 25px;
-  font-size: 11px; text-align: center;
-  color: hsl(0, 0%, 100%);
- }
-
-a{
-  color: var(--secundary-color);
-  font-weight: 600;
-  text-decoration: none;
+footer {
+  margin-block-start: 2em;
+  inline-size: 100%;
+  font-size: 0.75em;
+  text-align: center;
+  color: white;
 }
 
-.style-button{
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  background-color: var(--Grey-700);
-  text-align: center;
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
-  border-radius: 0.5em;
-  &:hover {
-    background-color: var(--secundary-color);
-    color: white;
-    cursor: pointer;
-  }
+a {
+  color: var(--secondary-color);
+  font-weight: 600;
+  text-decoration: none;
 }
 
 .style-button a{
   color: white;
 }
 
- 
+.style-button {
+  block-size: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--grey-700);
+  text-align: center;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 0.5em;
+  transition: background-color 0.2s ease;
+}
+
+.style-button:hover {
+  background-color: var(--secondary-color);
+  color: white;
+  cursor: pointer;
+}
+
 p#name {
   font-size: xx-large;
   font-weight: bold;
-  margin-bottom: 2px;
+  margin-block-end: 2px;
 }
 
-#location{
-  color: var(--secundary-color);
+#location {
+  color: var(--secondary-color);
   font-weight: bold;
-  margin-top: -2px;
-  &:hover { color: var(--primary-color);}
+  margin-block-start: -2px;
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
-        .container {
-            width: 80%;
-            margin: 0 auto;
-        }
+#location:hover {
+  color: var(--primary-color);
+}
+
+:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
 }
